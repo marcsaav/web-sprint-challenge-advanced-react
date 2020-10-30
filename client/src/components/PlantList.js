@@ -18,7 +18,10 @@ export default class PlantList extends Component {
         this.setState({
           plants: res.data.plantsData
         })
-      } )
+      })
+      .catch((err) => {
+        console.log(`Got an error here bud.`, err)
+      })
   }
 
   /*********  DON'T CHANGE ANYTHING IN THE RENDER FUNCTION *********/
